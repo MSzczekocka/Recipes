@@ -36,11 +36,11 @@ public class RecipeController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<String> postRecipe(@JsonView(RecipeView.PostPut.class) @RequestBody Recipe newRecipe,
+    public ResponseEntity<Recipe> postRecipe(@JsonView(RecipeView.PostPut.class) @RequestBody Recipe newRecipe,
                                              @AuthenticationPrincipal UserDetails details) {
         newRecipe.setOwner(details.getUsername());
         Recipe recipe = recipeService.addRecipe(newRecipe);
-        return new ResponseEntity<>("{\n" + "   \"id\": " + recipe.getId() + "\n" + "}", HttpStatus.OK);
+        return new ResponseEntity<>(recipe, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "{id}")
@@ -68,9 +68,9 @@ public class RecipeController {
         return HttpStatus.NO_CONTENT;
     }
 
-    @PostMapping(value = "{recipeId}/ingrdients/{ingredientId}/add")
+    @PostMapping(value = "{recipeId}/ingredients/add")
     public ResponseEntity<Recipe> addIngredientToRecipe(@PathVariable final Long recipeId,
-                                                        @PathVariable final String ingredient,
+                                                        @RequestBody final String ingredient,
                                                         @AuthenticationPrincipal UserDetails details) {
         Recipe recipe = recipeService.getRecipe(recipeId);
 
@@ -82,9 +82,9 @@ public class RecipeController {
         return new ResponseEntity<>(recipeToAdd, HttpStatus.OK);
     }
 
-    @PostMapping(value = "{recipeId}/directions/{directionId}/add")
+    @PostMapping(value = "{recipeId}/directions/add")
     public ResponseEntity<Recipe> addDirectionToRecipe(@PathVariable final Long recipeId,
-                                                       @PathVariable final String direction,
+                                                       @RequestBody final String direction,
                                                        @AuthenticationPrincipal UserDetails details) {
         Recipe recipe = recipeService.getRecipe(recipeId);
 

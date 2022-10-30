@@ -27,6 +27,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(getEncoder());
         auth.inMemoryAuthentication()
                 .withUser("user1").password(getEncoder().encode("user1")).roles()
+                .and().passwordEncoder(getEncoder())
+                .withUser("user2").password(getEncoder().encode("user2")).roles()
                 .and().passwordEncoder(getEncoder());
     }
 
@@ -35,9 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .mvcMatchers("/actuator/shutdown").permitAll()
                 .mvcMatchers("/api/register").permitAll()
-                .mvcMatchers("/api/user/{username}").authenticated()
                 .mvcMatchers("/", "/public").permitAll()
                 .mvcMatchers("/**").authenticated()
                 .and()
