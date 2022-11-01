@@ -54,7 +54,6 @@ public class RecipeService {
         recipesRepository.delete(recipe);
     }
 
-    @Transactional
     public Recipe editRecipe(Long id, @Valid Recipe recipe) {
         Recipe recipeToEdit = getRecipe(id);
         try {
@@ -64,6 +63,7 @@ public class RecipeService {
             recipeToEdit.setName(recipe.getName());
             recipeToEdit.setCategory(recipe.getCategory());
             recipeToEdit.setDate(LocalDateTime.now());
+            recipesRepository.save(recipeToEdit);
             return recipeToEdit;
         } catch (RuntimeException exception) {
             throw new RecipeBadRequestException();
