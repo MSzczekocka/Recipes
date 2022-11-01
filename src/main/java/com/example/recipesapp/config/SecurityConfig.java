@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 @RequiredArgsConstructor
+//TODO - change deprecated class
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserService userService;
 
