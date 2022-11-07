@@ -40,3 +40,4 @@ out/
 /gradlew
 /gradlew.bat
 /src/test/java/com/example/recipesapp/RecipesAppApplicationTests.java
+/appLog.log
