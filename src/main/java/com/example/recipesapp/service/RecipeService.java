@@ -63,7 +63,6 @@ public class RecipeService {
             recipeToEdit.setName(recipe.getName());
             recipeToEdit.setCategory(recipe.getCategory());
             recipeToEdit.setDate(LocalDateTime.now());
-            recipesRepository.save(recipeToEdit);
             return recipeToEdit;
         } catch (RuntimeException exception) {
             throw new RecipeBadRequestException();
