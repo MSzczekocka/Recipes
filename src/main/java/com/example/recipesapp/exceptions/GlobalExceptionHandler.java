@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class RecipeExceptionHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = EmailAlreadyInUseException.class)
     public ResponseEntity<Object> exception(EmailAlreadyInUseException exception) {
