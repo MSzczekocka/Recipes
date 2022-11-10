@@ -746,3 +746,272 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time 
 2022-11-09 17:54:51.004  INFO 4524 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-11-09 17:54:51.005  INFO 4524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-11-09 17:54:51.006  INFO 4524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 18:07:37.412  INFO 24756 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 24756 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 18:07:37.414  INFO 24756 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 18:07:38.163  INFO 24756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 18:07:38.199  INFO 24756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2022-11-09 18:07:38.591  INFO 24756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 18:07:38.598  INFO 24756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 18:07:38.598  INFO 24756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 18:07:38.695  INFO 24756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 18:07:38.695  INFO 24756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1250 ms
+2022-11-09 18:07:38.781  INFO 24756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 18:07:38.960  INFO 24756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 18:07:38.967  INFO 24756 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 18:07:39.056  INFO 24756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 18:07:39.086  INFO 24756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 18:07:39.185  INFO 24756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 18:07:39.252  INFO 24756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 18:07:39.733  INFO 24756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 18:07:39.739  INFO 24756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:07:39.951  WARN 24756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 18:07:40.232  INFO 24756 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-09 18:07:40.476  INFO 24756 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 18:07:40.478  INFO 24756 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 18:07:40.553  INFO 24756 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4101e146, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7104b117, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d2693f, org.springframework.security.web.header.HeaderWriterFilter@7f72855d, org.springframework.security.web.authentication.logout.LogoutFilter@519e14f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fa5fc67, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@8e100e7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74597c37, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@628b1538, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@361d169a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ebcfcf1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cd9ce76, org.springframework.security.web.session.SessionManagementFilter@3f119b55, org.springframework.security.web.access.ExceptionTranslationFilter@2f307fcc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2aac60b]
+2022-11-09 18:07:40.742  INFO 24756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 18:07:40.743  INFO 24756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 18:07:40.756  INFO 24756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 18:07:40.758  WARN 24756 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.toString()" because the return value of "springfox.documentation.spi.service.contexts.Orderings.patternsCondition(springfox.documentation.RequestHandler)" is null
+2022-11-09 18:07:40.762  INFO 24756 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:07:40.764  INFO 24756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 18:07:40.774  INFO 24756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 18:07:40.782  INFO 24756 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-09 18:07:40.794  INFO 24756 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-09 18:07:40.808 ERROR 24756 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.toString()" because the return value of "springfox.documentation.spi.service.contexts.Orderings.patternsCondition(springfox.documentation.RequestHandler)" is null
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.23.jar:5.3.23]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.example.recipesapp.RecipesAppApplication.main(RecipesAppApplication.java:12) ~[main/:na]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.toString()" because the return value of "springfox.documentation.spi.service.contexts.Orderings.patternsCondition(springfox.documentation.RequestHandler)" is null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37) ~[guava-20.0.jar:na]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[na:na]
+	at java.base/java.util.TimSort.sort(TimSort.java:220) ~[na:na]
+	at java.base/java.util.Arrays.sort(Arrays.java:1233) ~[na:na]
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135) ~[springfox-spring-web-2.9.2.jar:null]
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209) ~[guava-20.0.jar:na]
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) ~[springfox-spring-web-2.9.2.jar:null]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.23.jar:5.3.23]
+	... 14 common frames omitted
+
+2022-11-09 18:23:44.400  INFO 17464 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 17464 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 18:23:44.402  INFO 17464 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 18:23:45.032  INFO 17464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 18:23:45.077  INFO 17464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2022-11-09 18:23:45.605  INFO 17464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 18:23:45.614  INFO 17464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 18:23:45.614  INFO 17464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 18:23:45.720  INFO 17464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 18:23:45.721  INFO 17464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1283 ms
+2022-11-09 18:23:45.746  INFO 17464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 18:23:45.958  INFO 17464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 18:23:45.966  INFO 17464 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 18:23:46.073  INFO 17464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 18:23:46.117  INFO 17464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 18:23:46.226  INFO 17464 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 18:23:46.323  INFO 17464 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 18:23:46.824  INFO 17464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 18:23:46.829  INFO 17464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:23:47.120  WARN 17464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 18:23:47.646  INFO 17464 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 18:23:47.649  INFO 17464 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 18:23:47.767  INFO 17464 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@125c03d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e9ea888, org.springframework.security.web.context.SecurityContextPersistenceFilter@257da215, org.springframework.security.web.header.HeaderWriterFilter@48cbb4c5, org.springframework.security.web.authentication.logout.LogoutFilter@277dddcf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65192f16, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5e0b7f58, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@24f8707c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c502018, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e3bc13b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5643052d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e4a6afd, org.springframework.security.web.session.SessionManagementFilter@2740585b, org.springframework.security.web.access.ExceptionTranslationFilter@40304938, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15c8b75c]
+2022-11-09 18:23:47.972  INFO 17464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 18:23:47.973  INFO 17464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 18:23:47.989  INFO 17464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 18:23:48.009  INFO 17464 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 18:23:48.153  INFO 17464 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 4.144 seconds (JVM running for 4.644)
+2022-11-09 18:35:20.788  INFO 17464 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:35:20.790  INFO 17464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 18:35:20.792  INFO 17464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 18:37:54.136  INFO 17032 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 17032 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 18:37:54.137  INFO 17032 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 18:37:54.716  INFO 17032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 18:37:54.752  INFO 17032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2022-11-09 18:37:55.187  INFO 17032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 18:37:55.193  INFO 17032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 18:37:55.193  INFO 17032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 18:37:55.281  INFO 17032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 18:37:55.282  INFO 17032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1112 ms
+2022-11-09 18:37:55.306  INFO 17032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 18:37:55.473  INFO 17032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 18:37:55.480  INFO 17032 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 18:37:55.563  INFO 17032 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 18:37:55.594  INFO 17032 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 18:37:55.692  INFO 17032 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 18:37:55.759  INFO 17032 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 18:37:56.198  INFO 17032 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 18:37:56.203  INFO 17032 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:37:56.480  WARN 17032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 18:37:56.952  INFO 17032 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 18:37:56.955  INFO 17032 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 18:37:57.072  INFO 17032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19a544cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c502018, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c9e7af2, org.springframework.security.web.header.HeaderWriterFilter@7da40bf4, org.springframework.security.web.authentication.logout.LogoutFilter@62075e3d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26fc464f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4e3bc13b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58c93be3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76cad511, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f4b7a2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21f421b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dd62f07, org.springframework.security.web.session.SessionManagementFilter@c651286, org.springframework.security.web.access.ExceptionTranslationFilter@5101b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ec5d3e1]
+2022-11-09 18:37:57.248  INFO 17032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 18:37:57.249  INFO 17032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 18:37:57.262  INFO 17032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 18:37:57.280  INFO 17032 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 18:37:57.416  INFO 17032 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 3.541 seconds (JVM running for 3.933)
+2022-11-09 18:38:00.166  INFO 17032 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 18:38:00.167  INFO 17032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 18:38:00.169  INFO 17032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 19:57:51.305  INFO 26032 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 26032 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 19:57:51.307  INFO 26032 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 19:57:51.978  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 19:57:52.026  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2022-11-09 19:57:52.553  INFO 26032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 19:57:52.561  INFO 26032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 19:57:52.561  INFO 26032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 19:57:52.666  INFO 26032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 19:57:52.667  INFO 26032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1320 ms
+2022-11-09 19:57:52.692  INFO 26032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 19:57:52.913  INFO 26032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 19:57:52.920  INFO 26032 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 19:57:53.026  INFO 26032 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 19:57:53.075  INFO 26032 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 19:57:53.186  INFO 26032 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 19:57:53.274  INFO 26032 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 19:57:53.803  INFO 26032 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 19:57:53.809  INFO 26032 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 19:57:54.130  WARN 26032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 19:57:54.654  INFO 26032 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 19:57:54.657  INFO 26032 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 19:57:54.788  INFO 26032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@125c03d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e9ea888, org.springframework.security.web.context.SecurityContextPersistenceFilter@257da215, org.springframework.security.web.header.HeaderWriterFilter@48cbb4c5, org.springframework.security.web.authentication.logout.LogoutFilter@277dddcf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65192f16, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5e0b7f58, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@24f8707c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c502018, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e3bc13b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5643052d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e4a6afd, org.springframework.security.web.session.SessionManagementFilter@2740585b, org.springframework.security.web.access.ExceptionTranslationFilter@40304938, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15c8b75c]
+2022-11-09 19:57:54.988  INFO 26032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 19:57:54.989  INFO 26032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 19:57:55.004  INFO 26032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 19:57:55.022  INFO 26032 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 19:57:55.165  INFO 26032 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 4.132 seconds (JVM running for 4.637)
+2022-11-09 19:59:29.802  INFO 26032 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 19:59:29.804  INFO 26032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 19:59:29.805  INFO 26032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 19:59:32.794  INFO 15760 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 15760 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 19:59:32.796  INFO 15760 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 19:59:33.367  INFO 15760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 19:59:33.416  INFO 15760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2022-11-09 19:59:33.893  INFO 15760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 19:59:33.899  INFO 15760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 19:59:33.900  INFO 15760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 19:59:33.995  INFO 15760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 19:59:33.996  INFO 15760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1171 ms
+2022-11-09 19:59:34.019  INFO 15760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 19:59:34.196  INFO 15760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 19:59:34.202  INFO 15760 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 19:59:34.292  INFO 15760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 19:59:34.326  INFO 15760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 19:59:34.430  INFO 15760 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 19:59:34.498  INFO 15760 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 19:59:34.945  INFO 15760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 19:59:34.950  INFO 15760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 19:59:35.218  WARN 15760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 19:59:35.681  INFO 15760 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 19:59:35.685  INFO 15760 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 19:59:35.800  INFO 15760 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f776b4a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fb555e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@40304938, org.springframework.security.web.header.HeaderWriterFilter@40273969, org.springframework.security.web.authentication.logout.LogoutFilter@1fd73dcb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4a985388, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4468ced2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@19a544cd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@65192f16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52c2d1e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@506654fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c502018, org.springframework.security.web.session.SessionManagementFilter@7da40bf4, org.springframework.security.web.access.ExceptionTranslationFilter@533690d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7def62d0]
+2022-11-09 19:59:35.984  INFO 15760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 19:59:35.985  INFO 15760 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 19:59:35.999  INFO 15760 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 19:59:36.017  INFO 15760 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 19:59:36.161  INFO 15760 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 3.608 seconds (JVM running for 4.026)
+2022-11-09 19:59:53.208  INFO 15760 --- [http-nio-8881-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 19:59:53.209  INFO 15760 --- [http-nio-8881-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-09 19:59:53.210  INFO 15760 --- [http-nio-8881-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-09 19:59:53.316  INFO 15760 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["user1"]
+2022-11-09 19:59:53.750  INFO 15760 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.RecipeController:postRecipe() arguments: [{"name":"chocolate cake","category":"desserts","date":null,"description":"cook chocolate cake","ingredients":["chocolate","milk"],"directions":["direction1","direction2"]},{"password":null,"username":"user1","authorities":[],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true}]
+2022-11-09 19:59:53.755  INFO 15760 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.RecipeService:addRecipe() arguments: [{"name":"chocolate cake","category":"desserts","date":null,"description":"cook chocolate cake","ingredients":["chocolate","milk"],"directions":["direction1","direction2"]}]
+2022-11-09 19:59:53.827  INFO 15760 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.RecipeService:addRecipe() response: {"name":"chocolate cake","category":"desserts","date":[2022,11,9,19,59,53,757122400],"description":"cook chocolate cake","ingredients":["chocolate","milk"],"directions":["direction1","direction2"]}
+2022-11-09 19:59:53.834  INFO 15760 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.RecipeController:postRecipe() response: {"headers":{},"body":{"name":"chocolate cake","category":"desserts","date":[2022,11,9,19,59,53,757122400],"description":"cook chocolate cake","ingredients":["chocolate","milk"],"directions":["direction1","direction2"]},"statusCode":"OK","statusCodeValue":200}
+2022-11-09 19:59:55.965  INFO 15760 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.RecipeController:postRecipe() arguments: [{"name":"chocolate cupcake","category":"desserts","date":null,"description":"cook chocolate cupcake","ingredients":["white chocolate","milk"],"directions":["direction1","direction2"]},{"password":null,"username":"user1","authorities":[],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true}]
+2022-11-09 19:59:55.967  INFO 15760 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.RecipeService:addRecipe() arguments: [{"name":"chocolate cupcake","category":"desserts","date":null,"description":"cook chocolate cupcake","ingredients":["white chocolate","milk"],"directions":["direction1","direction2"]}]
+2022-11-09 19:59:55.971  INFO 15760 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.RecipeService:addRecipe() response: {"name":"chocolate cupcake","category":"desserts","date":[2022,11,9,19,59,55,967475000],"description":"cook chocolate cupcake","ingredients":["white chocolate","milk"],"directions":["direction1","direction2"]}
+2022-11-09 19:59:55.973  INFO 15760 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.RecipeController:postRecipe() response: {"headers":{},"body":{"name":"chocolate cupcake","category":"desserts","date":[2022,11,9,19,59,55,967475000],"description":"cook chocolate cupcake","ingredients":["white chocolate","milk"],"directions":["direction1","direction2"]},"statusCode":"OK","statusCodeValue":200}
+2022-11-09 20:04:31.938  INFO 15760 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:04:31.940  INFO 15760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 20:04:31.942  INFO 15760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 20:18:40.035  INFO 2120 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 2120 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 20:18:40.037  INFO 2120 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 20:18:40.616  INFO 2120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:18:40.652  INFO 2120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2022-11-09 20:18:41.107  INFO 2120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 20:18:41.114  INFO 2120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 20:18:41.114  INFO 2120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 20:18:41.212  INFO 2120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 20:18:41.213  INFO 2120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1146 ms
+2022-11-09 20:18:41.238  INFO 2120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 20:18:41.416  INFO 2120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 20:18:41.424  INFO 2120 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 20:18:41.520  INFO 2120 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:18:41.551  INFO 2120 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 20:18:41.652  INFO 2120 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:18:41.718  INFO 2120 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 20:18:42.173  INFO 2120 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:18:42.178  INFO 2120 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:18:42.453  WARN 2120 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:18:42.934  INFO 2120 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 20:18:42.938  INFO 2120 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 20:18:43.045  INFO 2120 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19a544cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c502018, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c9e7af2, org.springframework.security.web.header.HeaderWriterFilter@7da40bf4, org.springframework.security.web.authentication.logout.LogoutFilter@62075e3d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26fc464f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4e3bc13b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58c93be3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76cad511, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f4b7a2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21f421b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dd62f07, org.springframework.security.web.session.SessionManagementFilter@c651286, org.springframework.security.web.access.ExceptionTranslationFilter@5101b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ec5d3e1]
+2022-11-09 20:18:43.232  INFO 2120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 20:18:43.233  INFO 2120 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 20:18:43.246  INFO 2120 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 20:18:43.263  INFO 2120 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 20:18:43.398  INFO 2120 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 3.615 seconds (JVM running for 4.023)
+2022-11-09 20:20:23.051  INFO 2120 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:20:23.052  INFO 2120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 20:20:23.054  INFO 2120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-09 20:55:09.980  INFO 6600 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 6600 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2022-11-09 20:55:09.983  INFO 6600 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-09 20:55:10.554  INFO 6600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:55:10.594  INFO 6600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2022-11-09 20:55:11.049  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-11-09 20:55:11.058  INFO 6600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-09 20:55:11.058  INFO 6600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-09 20:55:11.154  INFO 6600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-09 20:55:11.155  INFO 6600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2022-11-09 20:55:11.179  INFO 6600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-09 20:55:11.357  INFO 6600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-09 20:55:11.365  INFO 6600 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../recipesapp_db'
+2022-11-09 20:55:11.459  INFO 6600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:55:11.492  INFO 6600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-09 20:55:11.590  INFO 6600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:55:11.654  INFO 6600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-09 20:55:12.092  INFO 6600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:55:12.097  INFO 6600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:55:12.381  WARN 6600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:55:12.871  INFO 6600 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-09 20:55:12.874  INFO 6600 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-09 20:55:12.978  INFO 6600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2fb555e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19a544cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d160161, org.springframework.security.web.header.HeaderWriterFilter@5ec25b61, org.springframework.security.web.authentication.logout.LogoutFilter@54c697c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15c8b75c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@21f421b8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c502018, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7ab8c972, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a67bcaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4468ced2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58c93be3, org.springframework.security.web.session.SessionManagementFilter@75708130, org.springframework.security.web.access.ExceptionTranslationFilter@3bf306d3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@736eb2a2]
+2022-11-09 20:55:13.170  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-11-09 20:55:13.170  INFO 6600 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-09 20:55:13.184  INFO 6600 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-09 20:55:13.203  INFO 6600 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-09 20:55:13.339  INFO 6600 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 3.618 seconds (JVM running for 4.063)
+2022-11-09 20:55:15.717  INFO 6600 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:55:15.719  INFO 6600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-09 20:55:15.720  INFO 6600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

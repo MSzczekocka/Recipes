@@ -41,3 +41,5 @@ out/
 /gradlew.bat
 /src/test/java/com/example/recipesapp/RecipesAppApplicationTests.java
 /appLog.log
+/appLog.log.2022-11-07.0.gz
+/appLog.log.2022-11-08.0.gz
