@@ -17,9 +17,7 @@ public class LoggingAdvice {
 
     Logger logger = LoggerFactory.getLogger(LoggingAdvice.class);
 
-    @Pointcut(value = "execution(* com.example.recipesapp.service.*.*(..))"
-            + "|| execution(* com.example.recipesapp.controller.*.*(..))"
-            + "|| execution(* com.example.recipesapp.exceptions.*.*(..))")
+    @Pointcut(value = "execution(* com.example.recipesapp.service.*.*(..))" + "|| execution(* com.example.recipesapp.controller.*.*(..))")
     public void myPointcut() {
 
     }
