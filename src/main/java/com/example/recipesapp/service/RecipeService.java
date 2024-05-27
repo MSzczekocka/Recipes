@@ -59,7 +59,7 @@ public class RecipeService {
         try {
             recipeToEdit.setDescription(recipe.getDescription());
             recipeToEdit.setDirections(recipe.getDirections());
-            recipeToEdit.setIngredients(recipe.getIngredients());
+            //recipeToEdit.setIngredients(recipe.getIngredients());
             recipeToEdit.setName(recipe.getName());
             recipeToEdit.setCategory(recipe.getCategory());
             recipeToEdit.setDate(LocalDateTime.now());
@@ -78,12 +78,12 @@ public class RecipeService {
         return recipe;
     }
 
-    @Transactional
-    public Recipe addIngredientToRecipe(Long recipeId, String ingredient) {
-        Recipe recipe = getRecipe(recipeId);
-        recipe.setDate(LocalDateTime.now());
-        recipe.addIngredient(ingredient);
-        return recipe;
-    }
+//    @Transactional
+//    public Recipe addIngredientToRecipe(Long recipeId, String ingredient) {
+//        Recipe recipe = getRecipe(recipeId);
+//        recipe.setDate(LocalDateTime.now());
+//        recipe.addIngredient(ingredient);
+//        return recipe;
+//    }
 
 }
