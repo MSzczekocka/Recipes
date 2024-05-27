@@ -57,12 +57,12 @@ public class Recipe {
     private String owner;
 
 
-    @ElementCollection
-    @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "ingredients")
-    @NotEmpty
-    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-    private List<@NotNull @NotBlank String> ingredients = new ArrayList<>();
+//    @ElementCollection
+//    @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
+//    @Column(name = "ingredients")
+//    @NotEmpty
+//    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
+//    private List<@NotNull @NotBlank String> ingredients = new ArrayList<>();
 
 
     @ElementCollection
@@ -73,9 +73,9 @@ public class Recipe {
     private List<@NotNull @NotBlank String> directions = new ArrayList<>();
 
 
-    public void addIngredient(String ingredient) {
-        ingredients.add(ingredient);
-    }
+//    public void addIngredient(String ingredient) {
+//        ingredients.add(ingredient);
+//    }
 
     public void addDirection(String direction) {
         directions.add(direction);

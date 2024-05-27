@@ -1,6 +1,5 @@
 package com.example.recipesapp.config;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.aspectj.lang.ProceedingJoinPoint;

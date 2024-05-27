@@ -36,4 +36,12 @@ public class UserService implements UserDetailsService {
             throw new UsernameNotFoundException("Not found: " + username);
         }
     }
+
+    public User findByEmail(String email) {
+        if (userRepository.findByEmail(email).isPresent()) {
+            return userRepository.findByEmail(email).get();
+        } else {
+            throw new UsernameNotFoundException("Not found: " + email);
+        }
+    }
 }
