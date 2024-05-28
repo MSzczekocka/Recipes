@@ -3,12 +3,10 @@ package com.example.recipesapp.controller;
 import com.example.recipesapp.dto.RatingDto;
 import com.example.recipesapp.entity.Rating;
 import com.example.recipesapp.entity.Recipe;
-import com.example.recipesapp.entity.RecipeView;
 import com.example.recipesapp.entity.User;
 import com.example.recipesapp.service.RatingService;
 import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.UserService;
-import com.fasterxml.jackson.annotation.JsonView;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +26,7 @@ public class RatingController {
     private final RecipeService recipeService;
 
     @GetMapping(value = "/my-ratings")
-    public ResponseEntity<List<Rating>> getAllRecipesForUser(@AuthenticationPrincipal UserDetails details) {
+    public ResponseEntity<List<Rating>> getAllRatingsForUser(@AuthenticationPrincipal UserDetails details) {
         User user = userService.findByEmail(details.getUsername());
         List<Rating> allRecipesWithUser = ratingService.getRatingsWithUser(user);
         return new ResponseEntity<>(allRecipesWithUser, HttpStatus.OK);
