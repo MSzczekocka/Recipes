@@ -40,11 +40,9 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String category;
 
-
     @LastModifiedDate
     @JsonView(RecipeView.Get.class)
     LocalDateTime date;
-
 
     @NotNull
     @NotBlank
