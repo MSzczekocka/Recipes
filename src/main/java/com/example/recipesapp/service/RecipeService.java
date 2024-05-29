@@ -58,7 +58,7 @@ public class RecipeService {
         Recipe recipeToEdit = getRecipe(id);
         try {
             recipeToEdit.setDescription(recipe.getDescription());
-            recipeToEdit.setDirections(recipe.getDirections());
+            recipeToEdit.setSteps(recipe.getSteps());
             //recipeToEdit.setIngredients(recipe.getIngredients());
             recipeToEdit.setName(recipe.getName());
             recipeToEdit.setCategory(recipe.getCategory());
@@ -71,10 +71,10 @@ public class RecipeService {
     }
 
     @Transactional
-    public Recipe addDirectionToRecipe(Long recipeId, String direction) {
+    public Recipe addStepToRecipe(Long recipeId, String step) {
         Recipe recipe = getRecipe(recipeId);
         recipe.setDate(LocalDateTime.now());
-        recipe.addDirection(direction);
+        recipe.addStep(step);
         return recipe;
     }
 

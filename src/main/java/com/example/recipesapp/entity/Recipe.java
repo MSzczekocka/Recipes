@@ -64,19 +64,19 @@ public class Recipe {
 
 
     @ElementCollection
-    @CollectionTable(name = "directions", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "directions")
+    @CollectionTable(name = "steps", joinColumns = @JoinColumn(name = "recipe_id"))
+    @Column(name = "steps")
     @NotEmpty
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-    private List<@NotNull @NotBlank String> directions = new ArrayList<>();
+    private List<@NotNull @NotBlank String> steps = new ArrayList<>();
 
 
 //    public void addIngredient(String ingredient) {
 //        ingredients.add(ingredient);
 //    }
 
-    public void addDirection(String direction) {
-        directions.add(direction);
+    public void addStep(String step) {
+        steps.add(step);
     }
 
 }

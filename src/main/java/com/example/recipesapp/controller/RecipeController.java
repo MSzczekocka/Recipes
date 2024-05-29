@@ -82,16 +82,16 @@ public class RecipeController {
 //        return new ResponseEntity<>(recipeToAdd, HttpStatus.OK);
 //    }
 
-    @PostMapping(value = "{recipeId}/directions/add")
+    @PostMapping(value = "{recipeId}/steps/add")
     public ResponseEntity<Recipe> addDirectionToRecipe(@PathVariable final Long recipeId,
-                                                       @RequestBody final String direction,
+                                                       @RequestBody final String step,
                                                        @AuthenticationPrincipal UserDetails details) {
         Recipe recipe = recipeService.getRecipe(recipeId);
 
         if (!recipe.getOwner().equals(details.getUsername()))
             throw new NotAnAuthorException();
 
-        Recipe recipeToAdd = recipeService.addDirectionToRecipe(recipeId, direction);
+        Recipe recipeToAdd = recipeService.addStepToRecipe(recipeId, step);
         return new ResponseEntity<>(recipeToAdd, HttpStatus.OK);
     }
 
