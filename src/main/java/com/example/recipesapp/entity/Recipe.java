@@ -34,11 +34,12 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String name;
 
-    @NotNull
-    @NotBlank
-    @Size(max = 100)
+    @ElementCollection
+    @CollectionTable(name = "categories", joinColumns = @JoinColumn(name = "recipe_id"))
+    @Column(name = "categories")
+    @NotEmpty
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-    private String category;
+    private List<@NotNull @NotBlank String> categories = new ArrayList<>();
 
     @LastModifiedDate
     @JsonView(RecipeView.Get.class)
@@ -54,15 +55,6 @@ public class Recipe {
     @JsonIgnore
     private String owner;
 
-
-//    @ElementCollection
-//    @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
-//    @Column(name = "ingredients")
-//    @NotEmpty
-//    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-//    private List<@NotNull @NotBlank String> ingredients = new ArrayList<>();
-
-
     @ElementCollection
     @CollectionTable(name = "steps", joinColumns = @JoinColumn(name = "recipe_id"))
     @Column(name = "steps")
@@ -71,9 +63,9 @@ public class Recipe {
     private List<@NotNull @NotBlank String> steps = new ArrayList<>();
 
 
-//    public void addIngredient(String ingredient) {
-//        ingredients.add(ingredient);
-//    }
+    public void addCategory(String category) {
+        categories.add(category);
+    }
 
     public void addStep(String step) {
         steps.add(step);

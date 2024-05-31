@@ -25,7 +25,7 @@ public class RecipeService {
     }
 
     public List<Recipe> getRecipeWithCategory(String category) {
-        List<Recipe> recipesWithCategory = recipesRepository.findByCategoryIgnoreCase(category);
+        List<Recipe> recipesWithCategory = recipesRepository.findByCategoriesIgnoreCase(category);
         recipesWithCategory.sort(Comparator.comparing(Recipe::getDate).reversed());
         return recipesWithCategory;
     }
@@ -59,9 +59,8 @@ public class RecipeService {
         try {
             recipeToEdit.setDescription(recipe.getDescription());
             recipeToEdit.setSteps(recipe.getSteps());
-            //recipeToEdit.setIngredients(recipe.getIngredients());
             recipeToEdit.setName(recipe.getName());
-            recipeToEdit.setCategory(recipe.getCategory());
+            recipeToEdit.setCategories(recipe.getCategories());
             recipeToEdit.setDate(LocalDateTime.now());
             recipesRepository.save(recipeToEdit);
             return recipeToEdit;
@@ -78,12 +77,12 @@ public class RecipeService {
         return recipe;
     }
 
-//    @Transactional
-//    public Recipe addIngredientToRecipe(Long recipeId, String ingredient) {
-//        Recipe recipe = getRecipe(recipeId);
-//        recipe.setDate(LocalDateTime.now());
-//        recipe.addIngredient(ingredient);
-//        return recipe;
-//    }
+    @Transactional
+    public Recipe addCategoryToRecipe(Long recipeId, String category) {
+        Recipe recipe = getRecipe(recipeId);
+        recipe.setDate(LocalDateTime.now());
+        recipe.addCategory(category);
+        return recipe;
+    }
 
 }
