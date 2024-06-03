@@ -11855,3 +11855,339 @@ insert into tags (id, tag) values (default, ?) [23505-214]
 2024-06-03 16:20:38.580  INFO 33040 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2024-06-03 16:20:38.773  INFO 33040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-06-03 16:20:38.774  INFO 33040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-03 17:15:02.770  INFO 15584 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 15584 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2024-06-03 17:15:02.770  INFO 15584 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-03 17:15:03.382  INFO 15584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 17:15:03.431  INFO 15584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 7 JPA repository interfaces.
+2024-06-03 17:15:03.920  INFO 15584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2024-06-03 17:15:03.927  INFO 15584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-03 17:15:03.927  INFO 15584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-06-03 17:15:04.039  INFO 15584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-03 17:15:04.039  INFO 15584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1231 ms
+2024-06-03 17:15:04.066  INFO 15584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-03 17:15:04.249  INFO 15584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-03 17:15:04.257  INFO 15584 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-03 17:15:04.371  INFO 15584 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 17:15:04.413  INFO 15584 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2024-06-03 17:15:04.554  INFO 15584 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-06-03 17:15:04.640  INFO 15584 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-03 17:15:05.291  INFO 15584 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 17:15:05.297  INFO 15584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:15:05.620  WARN 15584 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 17:15:06.334  INFO 15584 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-06-03 17:15:06.337  INFO 15584 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-03 17:15:06.433  INFO 15584 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19ea65f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dfe2797, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c08461b, org.springframework.security.web.header.HeaderWriterFilter@77587422, org.springframework.security.web.authentication.logout.LogoutFilter@5b395ee, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d76aa05, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@73ba3c4b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3f6fd33b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c4eccd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e95b7b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18f1a81a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34c050a1, org.springframework.security.web.session.SessionManagementFilter@5c94d4b8, org.springframework.security.web.access.ExceptionTranslationFilter@298cfe89, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e1535e0]
+2024-06-03 17:15:06.622  INFO 15584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2024-06-03 17:15:06.623  INFO 15584 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-06-03 17:15:06.640  INFO 15584 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-06-03 17:15:06.662  INFO 15584 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-06-03 17:15:06.799  INFO 15584 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllRatingsUsingGET_1
+2024-06-03 17:15:06.801  INFO 15584 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllRatingsForUserUsingGET_1
+2024-06-03 17:15:06.803  INFO 15584 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getRatingsForRecipeUsingGET_1
+2024-06-03 17:15:06.806  INFO 15584 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: postRatingUsingPOST_1
+2024-06-03 17:15:06.852  INFO 15584 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUnitUsingGET_1
+2024-06-03 17:15:06.870  INFO 15584 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 4.352 seconds (JVM running for 4.767)
+2024-06-03 17:15:29.059  INFO 15584 --- [http-nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 17:15:29.059  INFO 15584 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-03 17:15:29.060  INFO 15584 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-03 17:15:29.161  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["user1"]
+2024-06-03 17:15:29.529  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.RecipeController:postRecipe() arguments: [{"id":0,"name":"chocolate cake","categories":["desserts","cake"],"date":null,"description":"cook chocolate cake","owner":null,"steps":["direction1","direction2"],"tags":[]},{"password":null,"username":"user1","authorities":[],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true}]
+2024-06-03 17:15:29.534  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.RecipeService:addRecipe() arguments: [{"id":0,"name":"chocolate cake","categories":["desserts","cake"],"date":null,"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]}]
+2024-06-03 17:15:29.591  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.RecipeService:addRecipe() response: {"id":1,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,29,537336800],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]}
+2024-06-03 17:15:29.599  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.RecipeController:postRecipe() response: {"headers":{},"body":{"id":1,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,29,537336800],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:15:30.622  INFO 15584 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.RecipeController:postRecipe() arguments: [{"id":0,"name":"chocolate cake","categories":["desserts","cake"],"date":null,"description":"cook chocolate cake","owner":null,"steps":["direction1","direction2"],"tags":[]},{"password":null,"username":"user1","authorities":[],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true}]
+2024-06-03 17:15:30.623  INFO 15584 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.RecipeService:addRecipe() arguments: [{"id":0,"name":"chocolate cake","categories":["desserts","cake"],"date":null,"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]}]
+2024-06-03 17:15:30.626  INFO 15584 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.RecipeService:addRecipe() response: {"id":2,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,30,623263600],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]}
+2024-06-03 17:15:30.629  INFO 15584 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.RecipeController:postRecipe() response: {"headers":{},"body":{"id":2,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,30,623263600],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[]},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:15:38.402  INFO 15584 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.TagController:addTag() arguments: [{"id":0,"tag":"Vegetarian"}]
+2024-06-03 17:15:38.405  INFO 15584 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.TagService:addTag() arguments: [{"id":0,"tag":"Vegetarian"}]
+2024-06-03 17:15:38.414  INFO 15584 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.TagService:addTag() response: {"id":1,"tag":"Vegetarian"}
+2024-06-03 17:15:38.417  INFO 15584 --- [http-nio-8881-exec-2] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.TagController:addTag() response: {"headers":{},"body":{"id":1,"tag":"Vegetarian"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:15:45.080  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.RecipeController:addTagToRecipe() arguments: [1,1]
+2024-06-03 17:15:45.082  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.RecipeService:addTagToRecipe() arguments: [1,1]
+2024-06-03 17:15:45.110  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.RecipeService:addTagToRecipe() response: {"id":1,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,29,537337000],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[{"id":1,"tag":"Vegetarian"}]}
+2024-06-03 17:15:45.114  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.RecipeController:addTagToRecipe() response: {"headers":{},"body":{"id":1,"name":"chocolate cake","categories":["desserts","cake"],"date":[2024,6,3,17,15,29,537337000],"description":"cook chocolate cake","owner":"user1","steps":["direction1","direction2"],"tags":[{"id":1,"tag":"Vegetarian"}]},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:15:51.590  INFO 15584 --- [http-nio-8881-exec-6] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["string@mail.com"]
+2024-06-03 17:16:07.932  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["user1"]
+2024-06-03 17:16:08.084  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.TagController:getUnit() arguments: [1]
+2024-06-03 17:16:08.084  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.TagService:getTagWithId() arguments: [1]
+2024-06-03 17:16:08.088  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.TagService:getTagWithId() response: {"id":1,"tag":"Vegetarian"}
+2024-06-03 17:16:08.090  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.TagController:getUnit() response: {"headers":{},"body":{"id":1,"tag":"Vegetarian"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:18:43.577  INFO 15584 --- [http-nio-8881-exec-10] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["string@mail.com"]
+2024-06-03 17:18:56.725  INFO 15584 --- [http-nio-8881-exec-8] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UserController:register() arguments: [{"id":0,"email":"string@mail.com","password":"string1234"}]
+2024-06-03 17:18:56.801  INFO 15584 --- [http-nio-8881-exec-8] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:addUser() arguments: [{"id":0,"email":"string@mail.com","password":"$2a$10$BdbSv7kC7oCwYxL.Yu2LGOzu9jqbM0dSP9mtgjrrpBRG/FEBSN/qW"}]
+2024-06-03 17:18:56.806  INFO 15584 --- [http-nio-8881-exec-8] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UserService:addUser() response: null
+2024-06-03 17:18:56.808  INFO 15584 --- [http-nio-8881-exec-8] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UserController:register() response: {"headers":{},"body":{"id":1,"email":"string@mail.com","password":"$2a$10$BdbSv7kC7oCwYxL.Yu2LGOzu9jqbM0dSP9mtgjrrpBRG/FEBSN/qW"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:19:01.358  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["string@mail.com"]
+2024-06-03 17:19:01.358  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UserService:loadUserByUsername() response: {"password":"$2a$10$BdbSv7kC7oCwYxL.Yu2LGOzu9jqbM0dSP9mtgjrrpBRG/FEBSN/qW","enabled":true,"username":"string@mail.com","authorities":null,"credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}
+2024-06-03 17:19:01.443  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:getAllUnits() arguments: []
+2024-06-03 17:19:01.445  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:findAllUnits() arguments: []
+2024-06-03 17:19:01.450  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:findAllUnits() response: []
+2024-06-03 17:19:01.451  INFO 15584 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:getAllUnits() response: {"headers":{},"body":[],"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:20:24.762  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["user1"]
+2024-06-03 17:20:24.913  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:addUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:20:24.913  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:saveUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:20:24.918  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:saveUnit() response: {"id":1,"unit":"dm"}
+2024-06-03 17:20:24.919  INFO 15584 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:addUnit() response: {"headers":{},"body":{"id":1,"unit":"dm"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:20:31.305  INFO 15584 --- [http-nio-8881-exec-6] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:getAllUnits() arguments: []
+2024-06-03 17:20:31.305  INFO 15584 --- [http-nio-8881-exec-6] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:findAllUnits() arguments: []
+2024-06-03 17:20:31.309  INFO 15584 --- [http-nio-8881-exec-6] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:findAllUnits() response: [{"id":1,"unit":"dm"}]
+2024-06-03 17:20:31.311  INFO 15584 --- [http-nio-8881-exec-6] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:getAllUnits() response: {"headers":{},"body":[{"id":1,"unit":"dm"}],"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:20:35.271  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:getUnit() arguments: [1]
+2024-06-03 17:20:35.272  INFO 15584 --- [http-nio-8881-exec-7] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:getUnitWithId() arguments: [1]
+2024-06-03 17:20:35.281 ERROR 15584 --- [http-nio-8881-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.recipesapp.entity.Unit. Expected: class java.lang.Long, got class java.lang.Integer; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.recipesapp.entity.Unit. Expected: class java.lang.Long, got class java.lang.Integer] with root cause
+
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.recipesapp.entity.Unit. Expected: class java.lang.Long, got class java.lang.Integer
+	at org.hibernate.event.internal.DefaultLoadEventListener.checkIdClass(DefaultLoadEventListener.java:155) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:71) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1220) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.access$2100(SessionImpl.java:202) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.doLoad(SessionImpl.java:2848) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.lambda$load$1(SessionImpl.java:2825) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.perform(SessionImpl.java:2781) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2825) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:3413) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:3380) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.23.jar:5.3.23]
+	at jdk.proxy2/jdk.proxy2.$Proxy132.find(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-5.3.23.jar:5.3.23]
+	at jdk.proxy2/jdk.proxy2.$Proxy132.find(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:335) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81) ~[spring-data-commons-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.23.jar:5.3.23]
+	at jdk.proxy2/jdk.proxy2.$Proxy155.findById(Unknown Source) ~[na:na]
+	at com.example.recipesapp.service.UnitService.getUnitWithId(UnitService.java:23) ~[main/:na]
+	at com.example.recipesapp.service.UnitService$$FastClassBySpringCGLIB$$f8d98f37.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.recipesapp.config.LoggingAdvice.applicationLogger(LoggingAdvice.java:34) ~[main/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor102.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.recipesapp.service.UnitService$$EnhancerBySpringCGLIB$$4d88f54e.getUnitWithId(<generated>) ~[main/:na]
+	at com.example.recipesapp.controller.UnitController.getUnit(UnitController.java:36) ~[main/:na]
+	at com.example.recipesapp.controller.UnitController$$FastClassBySpringCGLIB$$2bab0631.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.recipesapp.config.LoggingAdvice.applicationLogger(LoggingAdvice.java:34) ~[main/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor102.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.example.recipesapp.controller.UnitController$$EnhancerBySpringCGLIB$$877a867c.getUnit(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-06-03 17:24:57.688  INFO 15584 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:24:57.689  INFO 15584 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-03 17:24:57.886  INFO 15584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-03 17:24:57.887  INFO 15584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-03 17:25:00.481  INFO 22156 --- [main] c.e.recipesapp.RecipesAppApplication     : Starting RecipesAppApplication using Java 17.0.1 on LAPTOP-ASESJDJB with PID 22156 (C:\Users\marty\IdeaProjects\RecipesApp\build\classes\java\main started by marty in C:\Users\marty\IdeaProjects\RecipesApp)
+2024-06-03 17:25:00.484  INFO 22156 --- [main] c.e.recipesapp.RecipesAppApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-03 17:25:01.105  INFO 22156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 17:25:01.158  INFO 22156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 7 JPA repository interfaces.
+2024-06-03 17:25:01.621  INFO 22156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2024-06-03 17:25:01.627  INFO 22156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-03 17:25:01.627  INFO 22156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-06-03 17:25:01.722  INFO 22156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-03 17:25:01.723  INFO 22156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1207 ms
+2024-06-03 17:25:01.747  INFO 22156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-03 17:25:01.903  INFO 22156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-03 17:25:01.910  INFO 22156 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-03 17:25:01.997  INFO 22156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 17:25:02.029  INFO 22156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2024-06-03 17:25:02.134  INFO 22156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-06-03 17:25:02.203  INFO 22156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-03 17:25:02.720  INFO 22156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 17:25:02.725  INFO 22156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:25:03.024  WARN 22156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 17:25:03.747  INFO 22156 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-06-03 17:25:03.750  INFO 22156 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-03 17:25:03.851  INFO 22156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@475fb7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41db6e4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@298cfe89, org.springframework.security.web.header.HeaderWriterFilter@6a2b6031, org.springframework.security.web.authentication.logout.LogoutFilter@64faf3d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2cca7d3c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@322399e6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5367d46f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d76aa05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e38329d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@443d94ae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c4eccd2, org.springframework.security.web.session.SessionManagementFilter@546ca9da, org.springframework.security.web.access.ExceptionTranslationFilter@2c3d1214, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6015c745]
+2024-06-03 17:25:04.048  INFO 22156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2024-06-03 17:25:04.049  INFO 22156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-06-03 17:25:04.066  INFO 22156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-06-03 17:25:04.087  INFO 22156 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-06-03 17:25:04.227  INFO 22156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllRatingsUsingGET_1
+2024-06-03 17:25:04.229  INFO 22156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllRatingsForUserUsingGET_1
+2024-06-03 17:25:04.231  INFO 22156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getRatingsForRecipeUsingGET_1
+2024-06-03 17:25:04.235  INFO 22156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: postRatingUsingPOST_1
+2024-06-03 17:25:04.285  INFO 22156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUnitUsingGET_1
+2024-06-03 17:25:04.303  INFO 22156 --- [main] c.e.recipesapp.RecipesAppApplication     : Started RecipesAppApplication in 4.078 seconds (JVM running for 4.5)
+2024-06-03 17:25:11.046  INFO 22156 --- [http-nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 17:25:11.046  INFO 22156 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-03 17:25:11.047  INFO 22156 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-03 17:25:11.139  INFO 22156 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UserService:loadUserByUsername() arguments: ["user1"]
+2024-06-03 17:25:11.489  INFO 22156 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:addUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:25:11.491  INFO 22156 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:saveUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:25:11.536  INFO 22156 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:saveUnit() response: {"id":1,"unit":"dm"}
+2024-06-03 17:25:11.545  INFO 22156 --- [http-nio-8881-exec-1] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:addUnit() response: {"headers":{},"body":{"id":1,"unit":"dm"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:25:16.039  INFO 22156 --- [http-nio-8881-exec-4] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:getAllUnits() arguments: []
+2024-06-03 17:25:16.040  INFO 22156 --- [http-nio-8881-exec-4] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:findAllUnits() arguments: []
+2024-06-03 17:25:16.048  INFO 22156 --- [http-nio-8881-exec-4] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:findAllUnits() response: [{"id":1,"unit":"dm"}]
+2024-06-03 17:25:16.050  INFO 22156 --- [http-nio-8881-exec-4] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:getAllUnits() response: {"headers":{},"body":[{"id":1,"unit":"dm"}],"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:25:18.912  INFO 22156 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:getUnit() arguments: [1]
+2024-06-03 17:25:18.913  INFO 22156 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:getUnitWithId() arguments: [1]
+2024-06-03 17:25:18.923  INFO 22156 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.service.UnitService:getUnitWithId() response: {"id":1,"unit":"dm"}
+2024-06-03 17:25:18.925  INFO 22156 --- [http-nio-8881-exec-3] c.e.recipesapp.config.LoggingAdvice      : class com.example.recipesapp.controller.UnitController:getUnit() response: {"headers":{},"body":{"id":1,"unit":"dm"},"statusCode":"OK","statusCodeValue":200}
+2024-06-03 17:25:26.457  INFO 22156 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.controller.UnitController:addUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:25:26.458  INFO 22156 --- [http-nio-8881-exec-5] c.e.recipesapp.config.LoggingAdvice      : Method invoked: class com.example.recipesapp.service.UnitService:saveUnit() arguments: [{"id":0,"unit":"dm"}]
+2024-06-03 17:25:26.463  WARN 22156 --- [http-nio-8881-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2024-06-03 17:25:26.463 ERROR 22156 --- [http-nio-8881-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_9D8OGHAE72307OI1QT14C1OAW_INDEX_4 ON PUBLIC.UNITS(UNIT NULLS FIRST) VALUES ( /* 1 */ 'dm' )"; SQL statement:
+insert into units (id, unit) values (default, ?) [23505-214]

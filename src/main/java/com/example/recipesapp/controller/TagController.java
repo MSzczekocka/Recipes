@@ -1,18 +1,13 @@
 package com.example.recipesapp.controller;
 
 
-import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.Tag;
-import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,4 +30,9 @@ public class TagController {
         return ResponseEntity.ok(newTag);
     }
 
+    @GetMapping(value = "{id}")
+    public ResponseEntity<Tag> getUnit(@PathVariable final Long id) {
+        Tag tag = tagService.getTagWithId(id);
+        return new ResponseEntity<>(tag, HttpStatus.OK);
+    }
 }
