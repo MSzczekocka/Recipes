@@ -1,10 +1,7 @@
 package com.example.recipesapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
@@ -16,7 +13,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -25,7 +23,7 @@ public class Recipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
+    @JsonView(RecipeView.Get.class)
     private long id;
 
     @NotNull
@@ -34,11 +32,12 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String name;
 
-    @NotNull
-    @NotBlank
-    @Size(max = 100)
+    @ElementCollection
+    @CollectionTable(name = "categories", joinColumns = @JoinColumn(name = "recipe_id"))
+    @Column(name = "categories")
+    @NotEmpty
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-    private String category;
+    private List<@NotNull @NotBlank String> categories = new ArrayList<>();
 
     @LastModifiedDate
     @JsonView(RecipeView.Get.class)
@@ -50,18 +49,7 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String description;
 
-
-    @JsonIgnore
     private String owner;
-
-
-//    @ElementCollection
-//    @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
-//    @Column(name = "ingredients")
-//    @NotEmpty
-//    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
-//    private List<@NotNull @NotBlank String> ingredients = new ArrayList<>();
-
 
     @ElementCollection
     @CollectionTable(name = "steps", joinColumns = @JoinColumn(name = "recipe_id"))
@@ -70,10 +58,19 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private List<@NotNull @NotBlank String> steps = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "recipe_tags",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
+    private List<@NotNull @NotBlank Tag> tags = new ArrayList<>();
 
-//    public void addIngredient(String ingredient) {
-//        ingredients.add(ingredient);
-//    }
+
+    public void addCategory(String category) {
+        categories.add(category);
+    }
 
     public void addStep(String step) {
         steps.add(step);

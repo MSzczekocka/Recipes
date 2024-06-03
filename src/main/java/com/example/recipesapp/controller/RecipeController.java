@@ -2,8 +2,11 @@ package com.example.recipesapp.controller;
 
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.RecipeView;
+import com.example.recipesapp.entity.Tag;
+import com.example.recipesapp.entity.TagView;
 import com.example.recipesapp.exceptions.NotAnAuthorException;
 import com.example.recipesapp.service.RecipeService;
+import com.example.recipesapp.service.TagService;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,6 +23,7 @@ import java.util.List;
 @RequestMapping("/api/recipe")
 public class RecipeController {
     private final RecipeService recipeService;
+    private final TagService tagService;
 
     @GetMapping("/all")
     @JsonView(RecipeView.Get.class)
@@ -68,19 +72,19 @@ public class RecipeController {
         return HttpStatus.NO_CONTENT;
     }
 
-//    @PostMapping(value = "{recipeId}/ingredients/add")
-//    public ResponseEntity<Recipe> addIngredientToRecipe(@PathVariable final Long recipeId,
-//                                                        @RequestBody final String ingredient,
-//                                                        @AuthenticationPrincipal UserDetails details) {
-//        Recipe recipe = recipeService.getRecipe(recipeId);
-//
-//        if (!recipe.getOwner().equals(details.getUsername()))
-//            throw new NotAnAuthorException();
-//
-//
-//        Recipe recipeToAdd = recipeService.addIngredientToRecipe(recipeId, ingredient);
-//        return new ResponseEntity<>(recipeToAdd, HttpStatus.OK);
-//    }
+    @PostMapping(value = "{recipeId}/categories/add")
+    public ResponseEntity<Recipe> addIngredientToRecipe(@PathVariable final Long recipeId,
+                                                        @RequestBody final String category,
+                                                        @AuthenticationPrincipal UserDetails details) {
+        Recipe recipe = recipeService.getRecipe(recipeId);
+
+        if (!recipe.getOwner().equals(details.getUsername()))
+            throw new NotAnAuthorException();
+
+
+        Recipe recipeToAdd = recipeService.addCategoryToRecipe(recipeId, category);
+        return new ResponseEntity<>(recipeToAdd, HttpStatus.OK);
+    }
 
     @PostMapping(value = "{recipeId}/steps/add")
     public ResponseEntity<Recipe> addDirectionToRecipe(@PathVariable final Long recipeId,
@@ -109,5 +113,19 @@ public class RecipeController {
     public ResponseEntity<List<Recipe>> getRecipesByName(@RequestParam String name) {
         List<Recipe> recipesByCategory = recipeService.getRecipeWithName(name);
         return new ResponseEntity<>(recipesByCategory, HttpStatus.OK);
+    }
+
+    @PostMapping("/{recipeId}/tags/{tagId}")
+    public ResponseEntity<Recipe> addTagToRecipe(@PathVariable Long recipeId, @PathVariable Long tagId) {
+        Recipe updatedRecipe = recipeService.addTagToRecipe(recipeId, tagId);
+        return new ResponseEntity<>(updatedRecipe, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/search/tag/{recipeId}")
+    @ResponseStatus(value = HttpStatus.OK)
+    @JsonView(TagView.Get.class)
+    public ResponseEntity<List<Tag>> getTagsForRecipesWithId(@PathVariable Long recipeId) {
+        List<Tag> tagsForRecipe = recipeService.getTagsForRecipe(recipeId);
+        return new ResponseEntity<>(tagsForRecipe, HttpStatus.OK);
     }
 }
