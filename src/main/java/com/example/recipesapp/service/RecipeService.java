@@ -1,9 +1,12 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.Recipe;
+import com.example.recipesapp.entity.Tag;
 import com.example.recipesapp.exceptions.RecipeBadRequestException;
 import com.example.recipesapp.exceptions.RecipeNotFoundException;
+import com.example.recipesapp.exceptions.TagNotFoundException;
 import com.example.recipesapp.repositories.RecipesRepository;
+import com.example.recipesapp.repositories.TagRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +15,13 @@ import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class RecipeService {
     private final RecipesRepository recipesRepository;
+    private final TagRepository tagRepository;
 
     public List<Recipe> getRecipes() {
         List<Recipe> allRecipes = recipesRepository.findAll();
@@ -83,6 +88,31 @@ public class RecipeService {
         recipe.setDate(LocalDateTime.now());
         recipe.addCategory(category);
         return recipe;
+    }
+
+
+    @Transactional
+    public Recipe addTagToRecipe(Long recipeId, Long tagId) {
+        Optional<Recipe> optionalRecipe = recipesRepository.findById(recipeId);
+        Optional<Tag> optionalTag = tagRepository.findById(tagId);
+
+        if (optionalRecipe.isPresent() && optionalTag.isPresent()) {
+            Recipe recipe = optionalRecipe.get();
+            Tag tag = optionalTag.get();
+            recipe.getTags().add(tag);
+            Recipe result = recipesRepository.save(recipe);
+            return result;
+        } else {
+            if (optionalRecipe.isEmpty()) {
+                throw new RecipeNotFoundException();
+            } else {
+                throw new TagNotFoundException();
+            }
+        }
+    }
+
+    public List<Tag> getTagsForRecipe(Long recipeId) {
+        return recipesRepository.findTagsByRecipeId(recipeId);
     }
 
 }

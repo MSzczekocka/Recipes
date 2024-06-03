@@ -27,13 +27,13 @@ public class FavouriteController {
     private final RecipeService recipeService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Favourite>> getAllRecipes() {
+    public ResponseEntity<List<Favourite>> getAllFavourites() {
         List<Favourite> allFavourites = favouriteService.getFavourite();
         return new ResponseEntity<>(allFavourites, HttpStatus.OK);
     }
 
     @GetMapping(value = "/my-favourites")
-    public ResponseEntity<List<Favourite>> getAllRatingsForUser(@AuthenticationPrincipal UserDetails details) {
+    public ResponseEntity<List<Favourite>> getAllFavouritesForUser(@AuthenticationPrincipal UserDetails details) {
         User user = userService.findByEmail(details.getUsername());
         List<Favourite> allRecipesWithUser = favouriteService.getFavouritesWithUser(user);
         return new ResponseEntity<>(allRecipesWithUser, HttpStatus.OK);
@@ -48,7 +48,7 @@ public class FavouriteController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Favourite> postRecipe(@RequestBody FavouriteDto favouriteDto,
+    public ResponseEntity<Favourite> postFavourite(@RequestBody FavouriteDto favouriteDto,
                                              @AuthenticationPrincipal UserDetails details) {
         User user = userService.findByEmail(details.getUsername());
         Recipe recipe = recipeService.getRecipe(favouriteDto.getRecipeId());

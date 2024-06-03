@@ -1,10 +1,7 @@
 package com.example.recipesapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
@@ -16,7 +13,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -25,7 +23,7 @@ public class Recipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
+    @JsonView(RecipeView.Get.class)
     private long id;
 
     @NotNull
@@ -51,8 +49,6 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String description;
 
-
-    @JsonIgnore
     private String owner;
 
     @ElementCollection
@@ -61,6 +57,15 @@ public class Recipe {
     @NotEmpty
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private List<@NotNull @NotBlank String> steps = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "recipe_tags",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
+    private List<@NotNull @NotBlank Tag> tags = new ArrayList<>();
 
 
     public void addCategory(String category) {

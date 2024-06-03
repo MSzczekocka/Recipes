@@ -42,13 +42,13 @@ public class CommentController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Comment>> getAllRecipes() {
+    public ResponseEntity<List<Comment>> getAllRatings() {
         List<Comment> allComments = commentService.getComments();
         return new ResponseEntity<>(allComments, HttpStatus.OK);
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Comment> postRecipe(@RequestBody CommentDto commentDto,
+    public ResponseEntity<Comment> postRating(@RequestBody CommentDto commentDto,
                                              @AuthenticationPrincipal UserDetails details) {
         User user = userService.findByEmail(details.getUsername());
         Recipe recipe = recipeService.getRecipe(commentDto.getRecipeId());

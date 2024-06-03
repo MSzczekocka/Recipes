@@ -41,13 +41,13 @@ public class RatingController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Rating>> getAllRecipes() {
+    public ResponseEntity<List<Rating>> getAllRatings() {
         List<Rating> allRecipes = ratingService.getRatings();
         return new ResponseEntity<>(allRecipes, HttpStatus.OK);
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Rating> postRecipe(@RequestBody RatingDto ratingDto,
+    public ResponseEntity<Rating> postRating(@RequestBody RatingDto ratingDto,
                                              @AuthenticationPrincipal UserDetails details) {
         User user = userService.findByEmail(details.getUsername());
         Recipe recipe = recipeService.getRecipe(ratingDto.getRecipeId());
