@@ -1,17 +1,11 @@
 package com.example.recipesapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
@@ -29,10 +23,15 @@ public class IngredientsRecipes {
     @JoinColumn(name = "recipeId", nullable = false)
     private Recipe recipe;
 
-    @ElementCollection
-    @CollectionTable(name = "ingredients", joinColumns = @JoinColumn(name = "ingredient_id"))
-    @Column(name = "ingredients")
-    @NotEmpty
-    private List<@NotNull @NotBlank String> ingredients = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "ingredient_id", nullable = false)
+    private Ingredient ingredient;
+
+    @Column(name = "amount")
+    private Double amount;
+
+    @ManyToOne
+    @JoinColumn(name = "unit_id", nullable = false)
+    private Unit unit;
 
 }
