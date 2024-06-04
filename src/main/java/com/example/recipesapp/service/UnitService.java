@@ -1,7 +1,6 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.Unit;
-import com.example.recipesapp.exceptions.TagBadRequestException;
 import com.example.recipesapp.exceptions.UnitBadRequestException;
 import com.example.recipesapp.exceptions.UnitNotFoundException;
 import com.example.recipesapp.repositories.UnitRepository;

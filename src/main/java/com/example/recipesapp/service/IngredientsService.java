@@ -1,13 +1,9 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.Ingredient;
-import com.example.recipesapp.entity.Unit;
 import com.example.recipesapp.exceptions.IngredientBadRequestException;
 import com.example.recipesapp.exceptions.IngredientNotFoundException;
-import com.example.recipesapp.exceptions.UnitBadRequestException;
-import com.example.recipesapp.exceptions.UnitNotFoundException;
 import com.example.recipesapp.repositories.IngredientRepository;
-import com.example.recipesapp.repositories.UnitRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

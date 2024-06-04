@@ -1,11 +1,9 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.Comment;
-import com.example.recipesapp.entity.Favourite;
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.User;
 import com.example.recipesapp.exceptions.CommentBadRequestException;
-import com.example.recipesapp.exceptions.FavouriteBadRequestException;
 import com.example.recipesapp.repositories.CommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

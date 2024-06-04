@@ -1,9 +1,7 @@
 package com.example.recipesapp.controller;
 
 import com.example.recipesapp.entity.Ingredient;
-import com.example.recipesapp.entity.Unit;
 import com.example.recipesapp.service.IngredientsService;
-import com.example.recipesapp.service.UnitService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
