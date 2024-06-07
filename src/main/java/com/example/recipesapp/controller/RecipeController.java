@@ -1,12 +1,10 @@
 package com.example.recipesapp.controller;
 
-import com.example.recipesapp.entity.Recipe;
-import com.example.recipesapp.entity.RecipeView;
-import com.example.recipesapp.entity.Tag;
-import com.example.recipesapp.entity.TagView;
+import com.example.recipesapp.entity.*;
 import com.example.recipesapp.exceptions.NotAnAuthorException;
 import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.TagService;
+import com.example.recipesapp.service.UserService;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,6 +22,7 @@ import java.util.List;
 public class RecipeController {
     private final RecipeService recipeService;
     private final TagService tagService;
+    private final UserService userService;
 
     @GetMapping("/all")
     @JsonView(RecipeView.Get.class)
@@ -42,7 +41,8 @@ public class RecipeController {
     @PostMapping("/new")
     public ResponseEntity<Recipe> postRecipe(@JsonView(RecipeView.PostPut.class) @RequestBody Recipe newRecipe,
                                              @AuthenticationPrincipal UserDetails details) {
-        newRecipe.setOwner(details.getUsername());
+        User user = userService.findByEmail(details.getUsername());
+        newRecipe.setOwner(user);
         Recipe recipe = recipeService.addRecipe(newRecipe);
         return new ResponseEntity<>(recipe, HttpStatus.OK);
     }
@@ -52,7 +52,7 @@ public class RecipeController {
     public HttpStatus deleteRecipe(@PathVariable final Long id, @AuthenticationPrincipal UserDetails details) {
         Recipe recipeToDelete = recipeService.getRecipe(id);
 
-        if (!recipeToDelete.getOwner().equals(details.getUsername()))
+        if (!recipeToDelete.getOwner().getEmail().equals(details.getUsername()))
             throw new NotAnAuthorException();
 
         recipeService.deleteRecipe(id);
@@ -65,7 +65,7 @@ public class RecipeController {
                                  @AuthenticationPrincipal UserDetails details) {
         Recipe recipeToEdit = recipeService.getRecipe(id);
 
-        if (!recipeToEdit.getOwner().equals(details.getUsername()))
+        if (!recipeToEdit.getOwner().getEmail().equals(details.getUsername()))
             throw new NotAnAuthorException();
 
         recipeService.editRecipe(id, recipe);
@@ -78,7 +78,7 @@ public class RecipeController {
                                                         @AuthenticationPrincipal UserDetails details) {
         Recipe recipe = recipeService.getRecipe(recipeId);
 
-        if (!recipe.getOwner().equals(details.getUsername()))
+        if (!recipe.getOwner().getEmail().equals(details.getUsername()))
             throw new NotAnAuthorException();
 
 
@@ -92,7 +92,7 @@ public class RecipeController {
                                                        @AuthenticationPrincipal UserDetails details) {
         Recipe recipe = recipeService.getRecipe(recipeId);
 
-        if (!recipe.getOwner().equals(details.getUsername()))
+        if (!recipe.getOwner().getEmail().equals(details.getUsername()))
             throw new NotAnAuthorException();
 
         Recipe recipeToAdd = recipeService.addStepToRecipe(recipeId, step);

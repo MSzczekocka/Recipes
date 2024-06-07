@@ -1,22 +1,29 @@
 package com.example.recipesapp.entity;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class UserDetailsImplementation implements UserDetails {
     private final String email;
     private final String password;
+    private final Set<Role> roles;
 
     public UserDetailsImplementation(User user) {
         email = user.getEmail();
         password = user.getPassword();
+        roles = user.getRoles();
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.name()))
+                .collect(Collectors.toSet());
     }
 
     @Override

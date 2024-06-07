@@ -4,6 +4,7 @@ import com.example.recipesapp.dto.CommentDto;
 import com.example.recipesapp.entity.Comment;
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.User;
+import com.example.recipesapp.exceptions.NotAnAuthorException;
 import com.example.recipesapp.service.CommentService;
 import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.UserService;
@@ -11,10 +12,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -60,5 +63,32 @@ public class CommentController {
 
         Comment comment = commentService.addComment(newComment);
         return new ResponseEntity<>(comment, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public  ResponseEntity<Void> deleteComment(@PathVariable final Integer id, @AuthenticationPrincipal UserDetails details) {
+        Comment commentToDelete = commentService.getCommentWithId(id);
+        if (!commentToDelete.getRecipe().getOwner().getEmail().equals(details.getUsername()) && !details.getAuthorities().contains(new SimpleGrantedAuthority("ADMIN"))){
+            throw new NotAnAuthorException();
+        } else {
+            commentService.deleteComment(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
+
+    @PutMapping(value = "{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public ResponseEntity<Void> editComment(@PathVariable final Integer id, @Valid @RequestBody CommentDto commentDto,
+                                 @AuthenticationPrincipal UserDetails details) {
+        Comment commentToEdit = commentService.getCommentWithId(id);
+
+        if (!commentToEdit.getRecipe().getOwner().getEmail().equals(details.getUsername())){
+            throw new NotAnAuthorException();
+        } else {
+            commentToEdit.setComment(commentDto.getComment());
+            commentService.editComment(commentToEdit);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
     }
 }

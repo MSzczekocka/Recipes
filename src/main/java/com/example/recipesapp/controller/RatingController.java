@@ -4,6 +4,7 @@ import com.example.recipesapp.dto.RatingDto;
 import com.example.recipesapp.entity.Rating;
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.User;
+import com.example.recipesapp.exceptions.NotAnAuthorException;
 import com.example.recipesapp.service.RatingService;
 import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.UserService;
@@ -11,9 +12,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -59,5 +62,32 @@ public class RatingController {
 
         Rating rating = ratingService.addRating(newRating);
         return new ResponseEntity<>(rating, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public  ResponseEntity<Void> deleteRating(@PathVariable final Integer id, @AuthenticationPrincipal UserDetails details) {
+        Rating ratingToDelete = ratingService.getRatingWithId(id);
+        if (!ratingToDelete.getUser().getEmail().equals(details.getUsername()) && !details.getAuthorities().contains(new SimpleGrantedAuthority("ADMIN"))){
+            throw new NotAnAuthorException();
+        } else {
+            ratingService.deleteRating(ratingToDelete);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
+
+    @PutMapping(value = "{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public ResponseEntity<Void> editRating(@PathVariable final Integer id, @Valid @RequestBody RatingDto ratingDto,
+                                           @AuthenticationPrincipal UserDetails details) {
+        Rating ratingToEdit = ratingService.getRatingWithId(id);
+
+        if (!ratingToEdit.getUser().getEmail().equals(details.getUsername())){
+            throw new NotAnAuthorException();
+        } else {
+            ratingToEdit.setRating(ratingDto.getRating());
+            ratingService.editRating(ratingToEdit);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
     }
 }

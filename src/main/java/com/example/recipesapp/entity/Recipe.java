@@ -49,7 +49,9 @@ public class Recipe {
     @JsonView({RecipeView.PostPut.class, RecipeView.Get.class})
     private String description;
 
-    private String owner;
+    @ManyToOne
+    @JoinColumn(name = "userId", nullable = false)
+    private User owner;
 
     @ElementCollection
     @CollectionTable(name = "steps", joinColumns = @JoinColumn(name = "recipe_id"))

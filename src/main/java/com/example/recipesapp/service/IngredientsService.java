@@ -1,16 +1,13 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.Ingredient;
-import com.example.recipesapp.entity.Unit;
 import com.example.recipesapp.exceptions.IngredientBadRequestException;
 import com.example.recipesapp.exceptions.IngredientNotFoundException;
-import com.example.recipesapp.exceptions.UnitBadRequestException;
-import com.example.recipesapp.exceptions.UnitNotFoundException;
 import com.example.recipesapp.repositories.IngredientRepository;
-import com.example.recipesapp.repositories.UnitRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -31,6 +28,15 @@ public class IngredientsService {
             return ingredientRepository.save(newIngredient);
         } catch (Exception exception) {
             throw new IngredientBadRequestException();
+        }
+    }
+
+    @Transactional
+    public void deleteIngredient(Ingredient ingredientToDelete) {
+        try {
+            ingredientRepository.delete(ingredientToDelete);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to delete ingredient with ID " + ingredientToDelete.getId(), e);
         }
     }
 }

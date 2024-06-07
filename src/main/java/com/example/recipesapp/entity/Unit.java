@@ -1,6 +1,5 @@
 package com.example.recipesapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

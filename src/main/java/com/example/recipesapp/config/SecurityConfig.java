@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("user1").password(getEncoder().encode("user1")).roles()
                 .and().passwordEncoder(getEncoder())
-                .withUser("user2").password(getEncoder().encode("user2")).roles()
+                .withUser("user2").password(getEncoder().encode("user2")).roles("USER")
                 .and().passwordEncoder(getEncoder());
     }
 
@@ -39,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .mvcMatchers("/api/register").permitAll()
                 .mvcMatchers("/", "/public").permitAll()
+                .mvcMatchers("/api/recipe/all").permitAll()
                 .mvcMatchers("/**").authenticated()
                 .and()
                 .formLogin()
