@@ -1,5 +1,6 @@
 package com.example.recipesapp.service;
 
+import com.example.recipesapp.entity.Rating;
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.Tag;
 import com.example.recipesapp.exceptions.TagBadRequestException;
@@ -8,6 +9,7 @@ import com.example.recipesapp.repositories.TagRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -37,6 +39,15 @@ public class TagService {
             return tagRepository.save(newTag);
         } catch (Exception exception) {
             throw new TagBadRequestException();
+        }
+    }
+
+    @Transactional
+    public void deleteTag(Tag tagToDelete) {
+        try {
+            tagRepository.delete(tagToDelete);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to delete tag with ID " + tagToDelete.getId(), e);
         }
     }
 

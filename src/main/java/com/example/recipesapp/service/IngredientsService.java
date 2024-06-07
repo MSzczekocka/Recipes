@@ -7,6 +7,7 @@ import com.example.recipesapp.repositories.IngredientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -27,6 +28,15 @@ public class IngredientsService {
             return ingredientRepository.save(newIngredient);
         } catch (Exception exception) {
             throw new IngredientBadRequestException();
+        }
+    }
+
+    @Transactional
+    public void deleteIngredient(Ingredient ingredientToDelete) {
+        try {
+            ingredientRepository.delete(ingredientToDelete);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to delete ingredient with ID " + ingredientToDelete.getId(), e);
         }
     }
 }

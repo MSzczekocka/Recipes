@@ -4,6 +4,7 @@ import com.example.recipesapp.dto.FavouriteDto;
 import com.example.recipesapp.entity.Favourite;
 import com.example.recipesapp.entity.Recipe;
 import com.example.recipesapp.entity.User;
+import com.example.recipesapp.exceptions.NotAnAuthorException;
 import com.example.recipesapp.service.FavouriteService;
 import com.example.recipesapp.service.RecipeService;
 import com.example.recipesapp.service.UserService;
@@ -59,6 +60,18 @@ public class FavouriteController {
 
         Favourite favourite = favouriteService.addFavourite(newFavourite);
         return new ResponseEntity<>(favourite, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public  ResponseEntity<Void> deleteFavourite(@PathVariable final Integer id, @AuthenticationPrincipal UserDetails details) {
+        Favourite favouriteToDelete = favouriteService.getFavouriteWithId(id);
+        if (!favouriteToDelete.getUser().getEmail().equals(details.getUsername())){
+            throw new NotAnAuthorException();
+        } else {
+            favouriteService.deleteRating(favouriteToDelete);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
     }
 
 }

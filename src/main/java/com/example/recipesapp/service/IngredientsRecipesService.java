@@ -1,12 +1,15 @@
 package com.example.recipesapp.service;
 
 import com.example.recipesapp.entity.IngredientsRecipes;
+import com.example.recipesapp.exceptions.CommentBadRequestException;
 import com.example.recipesapp.exceptions.IngredientsRecipesBadRequestException;
 import com.example.recipesapp.exceptions.TagNotFoundException;
 import com.example.recipesapp.repositories.IngredientsRecipesRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.util.List;
 
 @Service
@@ -33,4 +36,23 @@ public class IngredientsRecipesService {
             throw new IngredientsRecipesBadRequestException();
         }
     }
+
+    @Transactional
+    public void deleteIngredientsRecipes(Integer id) {
+        try {
+            ingredientsRecipesRepository.delete(findIngredientsRecipesWithId(id));
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to delete IngredientsRecipes with ID " + id, e);
+        }
+    }
+
+    public IngredientsRecipes editIngredientsRecipes(@Valid IngredientsRecipes newIngredientsRecipes) {
+        try {
+            ingredientsRecipesRepository.save(newIngredientsRecipes);
+            return newIngredientsRecipes;
+        } catch (RuntimeException exception) {
+            throw new CommentBadRequestException();
+        }
+    }
+
 }
