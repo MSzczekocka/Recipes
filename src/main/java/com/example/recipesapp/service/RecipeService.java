@@ -1,7 +1,6 @@
 package com.example.recipesapp.service;
 
-import com.example.recipesapp.entity.Recipe;
-import com.example.recipesapp.entity.Tag;
+import com.example.recipesapp.entity.*;
 import com.example.recipesapp.exceptions.RecipeBadRequestException;
 import com.example.recipesapp.exceptions.RecipeNotFoundException;
 import com.example.recipesapp.exceptions.TagNotFoundException;
@@ -22,6 +21,10 @@ import java.util.Optional;
 public class RecipeService {
     private final RecipesRepository recipesRepository;
     private final TagRepository tagRepository;
+    private final CommentService commentService;
+    private final FavouriteService favouriteService;
+    private final IngredientsRecipesService ingredientsRecipesService;
+    private final RatingService ratingService;
 
     public List<Recipe> getRecipes() {
         List<Recipe> allRecipes = recipesRepository.findAll();
@@ -56,6 +59,16 @@ public class RecipeService {
 
     public void deleteRecipe(Long id) {
         Recipe recipe = getRecipe(id);
+        List<Comment> allRecipesComments = commentService.getCommentsWithRecipe(recipe);
+        List<Favourite> allRecipesFavourite = favouriteService.getFavouritesWithRecipe(recipe);
+        List<IngredientsRecipes> allRecipesIngredientsRecipes = ingredientsRecipesService.findAllIngredientsRecipesWithRecipe(id);
+        List<Rating> allRecipesRating = ratingService.getRatingsWithRecipe(recipe);
+
+        allRecipesComments.forEach(comment -> commentService.deleteComment(comment.getId()));
+        allRecipesFavourite.forEach(favouriteService::deleteRating);
+        allRecipesIngredientsRecipes.forEach(ingredientsRecipes -> ingredientsRecipesService.deleteIngredientsRecipes(ingredientsRecipes.getId()));
+        allRecipesRating.forEach(ratingService::deleteRating);
+
         recipesRepository.delete(recipe);
     }
 
