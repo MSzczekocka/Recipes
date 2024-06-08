@@ -26,13 +26,13 @@ public class IngredientController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Ingredient> addUnit(@RequestBody Ingredient ingredient) {
+    public ResponseEntity<Ingredient> addIngredient(@RequestBody Ingredient ingredient) {
         Ingredient newIngredient = ingredientsService.saveIngredient(ingredient);
         return new ResponseEntity<>(newIngredient, HttpStatus.OK);
     }
 
     @GetMapping(value = "{id}")
-    public ResponseEntity<Ingredient> getUnit(@PathVariable final Integer id) {
+    public ResponseEntity<Ingredient> getIngredient(@PathVariable final Integer id) {
         Ingredient ingredient = ingredientsService.getIngredientWithId(id);
         return new ResponseEntity<>(ingredient, HttpStatus.OK);
     }
